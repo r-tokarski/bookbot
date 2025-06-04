@@ -1,6 +1,4 @@
-def get_book_text(book):
-    with open(book) as b:
-       return b.read()
+from stats import get_book_text
 
 def main():
     path = "books/frankenstein.txt"
