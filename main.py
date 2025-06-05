@@ -7,14 +7,15 @@ def main():
     words_int = len(words)
 
     chars = get_book_chars(path)
-    sorted = sort_chars(path)
+    char_list = sort_chars(path)
 
     print("============ BOOKBOT ============")
     print(f"Analyzing book found at {path}...")
     print("----------- Word Count ----------")
     print(f"Found {words_int} total words")
     print("--------- Character Count -------")
-    #print(chars)
-    print(sorted)
+    for item in char_list:
+        print(f"{item["char"]}: {item["num"]}")
+    print("============= END ==============")
 
 main()

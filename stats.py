@@ -19,7 +19,7 @@ def sort_on(dict):
 
 def sort_chars(book):
     alphabet = get_book_chars(book)
-    list = []
+    char_list = []
     result = ""
     for alpha_char in alphabet:
         if alpha_char.isalpha() == True:
@@ -28,10 +28,6 @@ def sort_chars(book):
             alpha_char = {}
             alpha_char["char"] = string_char
             alpha_char["num"] = value_char
-            list.append(alpha_char)
-    list.sort(reverse=True, key=sort_on)
-    for dict in list:
-        result = result + f"{dict["char"]}: {dict["num"]}\n"
-        if dict == list[-1]:
-            result = result + f"============= END ==============="
-    return result
+            char_list.append(alpha_char)
+    char_list.sort(reverse=True, key=sort_on)
+    return char_list
